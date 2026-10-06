@@ -16,10 +16,23 @@ public class TipoTriangulo {
         int lado3 = sc.nextInt();
         sc.close();
 
-        System.out.println("El tipo de triángulo es: ");
-        System.out.println((lado1 == lado2 && lado1 == lado3 && lado2 == lado3) 
-        ? "Equilátero" : "Escaleno");
-        System.out.println((lado1 == lado2 && lado2 != lado3 || lado1 != lado2 && lado2 == lado3 || lado1 == lado3 && lado2 != lado3) ? "Isósceles" : "Escaleno");
+        //System.out.println("El tipo de triángulo es: ");
+        //System.out.println((lado1 == lado2 && lado1 == lado3 && lado2 == lado3) 
+        //? "Equilátero" : "Escaleno");
+        //System.out.println((lado1 == lado2 && lado2 != lado3 || lado1 != lado2 && lado2 == lado3 || lado1 == lado3 && lado2 != lado3) ? "Isósceles" : "Escaleno");
         
+        //se hace conm boolean
+        boolean equilatero = (lado1 == lado2 && lado1 == lado3 && lado2 == lado3);
+        boolean escaleno = (lado1 != lado2 && lado1 != lado3 && lado2 != lado3);
+
+        //pasa a ser innecesario esto porque ya pasa a ser la única opcion restante
+        //boolean isosceles = lado1 == lado2 && lado1 != lado3
+            //|| lado1 != lado3 && lado1 == lado2
+            //|| lado2 == lado3 && lado2 != lado1;
+
+            //puedo de esta forma anidar el ternario
+        String tipoTriangulo = equilatero ? "Equilátero" : escaleno ? "Escaleno" : "Isósceles";
+
+        System.out.println(tipoTriangulo);
     }
 }
