@@ -1,4 +1,4 @@
-package ud2.bucles;
+package ud2.condicional;
 
 public class EjemploSwitch {
     public static void main(String[] args) {
