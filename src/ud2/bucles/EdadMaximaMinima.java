@@ -7,21 +7,25 @@ public class EdadMaximaMinima {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce la edad: ");
         int edad = sc.nextInt();
-        int edadMax = 0;
-        int edadMin = 0;
+        int edadMax = edad;
+        int edadMin = edad;
 
         while (edad != -1) {
+            //otra forma de hacerlo
+                //edadMax = Math.max(edad, edadMax);
+                //edadMin = Math.min(edad, edadMin);
             if(edad > edadMax){
-                edadMax = edad;
+                edadMax = Math.max(edad, edadMin);
             }
             if (edad < edadMax) {
                 edadMin = edad; 
             }
+            
             System.out.println("Introduce la edad: ");
             edad = sc.nextInt();
         }
         System.out.println("Edad máxima: " + edadMax);
-        System.out.println("Edad mínima es: " + edadMin);
+        System.out.println("Edad mínima: " + edadMin);
         sc.close();
     }
 }
