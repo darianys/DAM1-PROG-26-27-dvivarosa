@@ -10,7 +10,7 @@ public class ArbolMasAlto {
         double alturaArbol = sc.nextDouble();
 
         System.out.print("Introducir la identificación del árbol: ");
-        String identArbol = sc.nextLine();
+        String identArbol = sc.next();
 
         double alturaMayor = 0;
         String etiqueta = "";
@@ -19,10 +19,18 @@ public class ArbolMasAlto {
         while (!identArbol.isEmpty() && alturaArbol != -1) {
             if (alturaArbol > alturaMayor) {
                 alturaMayor = alturaArbol;
+                etiqueta = identArbol;
             }
+
+            System.out.print("Introducir la altura del árbol (en centímetros): ");
             alturaArbol = sc.nextDouble();
-        }
-        System.out.printf("el arbol más alto mide %.2f ", alturaMayor);
+
+            System.out.print("Introducir la identificación del árbol: ");
+            identArbol = sc.next();
+        } 
         sc.close();
+
+        System.out.printf("El arbol más alto mide %.2fcm ",alturaMayor);
+        System.out.println(etiqueta);
     }
 }
