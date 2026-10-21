@@ -9,16 +9,20 @@ public class FormacionSoldados {
         int soldados = sc.nextInt();
         sc.close();
 
-        for (int i = 1; i <= soldados; i++) {
+        System.out.println("Formación cuadrada: ");
+        if (soldados > 0) {
 
-            for (int j = 0; j < soldados / 2; j++) {
-                System.out.print("*");
-            }
+            for (int i = 1; i < soldados / 2; i++) {
 
-            System.out.println();
+                for (int j = 0; j < soldados / 2 - 1; j++) {
+                    System.out.print("*");
+                }
 
-            for (int j = 0; j < i / 2; j++) {
-                System.out.print("*");
+                System.out.println();
+
+                for (int j = 0; j > i; j--) {
+                    System.out.print("*");
+                }
             }
         }
     }
