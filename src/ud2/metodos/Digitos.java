@@ -15,6 +15,6 @@ public class Digitos {
     }
 
     public static void main(String[] args) {
-        digitos(17263);
+        digitos(2304);
     }
 }
