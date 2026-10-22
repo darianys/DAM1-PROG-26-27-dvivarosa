@@ -2,80 +2,145 @@ package ud2.metodos;
 
 import java.util.Scanner;
 
+/**
+ * @author Darianys Rosales
+ *         NumeroALetra
+ */
 public class NumeroALetra {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Introducir un numero entre 1 y 99: ");
+        System.out.print("Introduce un número entre 1 y 99: ");
         int num = sc.nextInt();
-        sc.close();
 
-        String numEscrito = switch (num) {
-            case 1 -> "Uno";
-            case 2 -> "Dos";
-            case 3 -> "Tres";
-            case 4 -> "Cuatro";
-            case 5 -> "Cinco";
-            case 6 -> "Séis";
-            case 7 -> "Siete";
-            case 8 -> "Ocho";
-            case 9 -> "Nueve";
-            case 10 -> "Diez";
-            case 11 -> "Once";
-            case 12 -> "Doce";
-            case 13 -> "Trece";
-            case 14 -> "Catorce";
-            case 15 -> "Quince";
-            case 16 -> "Dieciséis";
-            case 17 -> "Diecisiete";
-            case 18 -> "Dieciocho";
-            case 19 -> "Diecinueve";
-            case 20 -> "Veinte";
-            case 21 -> "Veintiuno";
-            case 22 -> "Veintidós";
-            case 23 -> "Veintitrés";
-            case 24 -> "Veinticuatro";
-            case 25 -> "Veinticinco";
-            case 26 -> "Veintiséis";
-            case 27 -> "Veintisiete";
-            case 28 -> "Venitiocho";
-            case 29 -> "Veintinueve";
-            case 30 -> "Treinta";
-            case 31 -> "Treinta y uno";
-            case 32 -> "Treinta y dos";
-            case 33 -> "Treinta y tres";
-            case 34 -> "Treinta y cuatro";
-            case 35 -> "Treinta y cinco";
-            case 36 -> "Treinta y séis";
-            case 37 -> "Treinta y siete";
-            case 38 -> "Treinta y ocho";
-            case 39 -> "Treinta y nueve";
-            case 40 -> "Cuarenta";
-            case 41 -> "Cuarenta y uno";
-            case 42 -> "Cuarenta y dos";
-            case 43 -> "Cuarenta y tres";
-            case 44 -> "Cuarenta y cuatro";
-            case 45 -> "Cuarenta y cinco";
-            case 46 -> "Cuarenta y séis";
-            case 47 -> "Cuarenta y siete";
-            case 48 -> "Cuarenta y ocho";
-            case 49 -> "Cuarenta y nueve";
-            case 50 -> "Cincuenta";
-            case 51 -> "Cincuenta y uno";
-            case 52 -> "Cincuenta y dos";
-            case 53 -> "Cincuenta y tres";
-            case 54 -> "Cincuenta y cuatro";
-            case 55 -> "Cincuenta y cinco";
-            case 56 -> "Cincuenta y séis";
-            case 57 -> "Cincuenta y siete";
-            case 58 -> "Cincuenta y ocho";
-            case 59 -> "Cincuenta y nueve";
-            
-                
-        
-            default -> "Número invalido";
-            
-        };
-        System.out.println(numEscrito);
-        
+        while (num >= 1 && num <= 99) {
+
+            int decena = num / 10;
+            int unidad = num % 10;
+            String resultado = "";
+
+            if (num >= 10 && num <= 19) {
+
+                if (num == 10)
+                    resultado = "diez";
+                else if (num == 11)
+                    resultado = "once";
+                else if (num == 12)
+                    resultado = "doce";
+                else if (num == 13)
+                    resultado = "trece";
+                else if (num == 14)
+                    resultado = "catorce";
+                else if (num == 15)
+                    resultado = "quince";
+                else if (num == 16)
+                    resultado = "dieciséis";
+                else if (num == 17)
+                    resultado = "diecisiete";
+                else if (num == 18)
+                    resultado = "dieciocho";
+                else if (num == 19)
+                    resultado = "diecinueve";
+
+            } else if (num >= 20 && num <= 29) {
+
+                if (num == 20) {
+                    resultado = "veinte";
+                } else {
+                    resultado = "veinti";
+                    if (unidad == 1)
+                        resultado += "uno";
+                    else if (unidad == 2)
+                        resultado += "dos";
+                    else if (unidad == 3)
+                        resultado += "tres";
+                    else if (unidad == 4)
+                        resultado += "cuatro";
+                    else if (unidad == 5)
+                        resultado += "cinco";
+                    else if (unidad == 6)
+                        resultado += "seis";
+                    else if (unidad == 7)
+                        resultado += "siete";
+                    else if (unidad == 8)
+                        resultado += "ocho";
+                    else if (unidad == 9)
+                        resultado += "nueve";
+                }
+            } else {
+                String textoDecena = "";
+                String textoUnidad = "";
+
+                if (decena == 0) {
+                    if (unidad == 1)
+                        resultado = "uno";
+                    else if (unidad == 2)
+                        resultado = "dos";
+                    else if (unidad == 3)
+                        resultado = "tres";
+                    else if (unidad == 4)
+                        resultado = "cuatro";
+                    else if (unidad == 5)
+                        resultado = "cinco";
+                    else if (unidad == 6)
+                        resultado = "seis";
+                    else if (unidad == 7)
+                        resultado = "siete";
+                    else if (unidad == 8)
+                        resultado = "ocho";
+                    else if (unidad == 9)
+                        resultado = "nueve";
+                    
+                } else {
+                    if (decena == 3)
+                        textoDecena = "treinta";
+                    else if (decena == 4)
+                        textoDecena = "cuarenta";
+                    else if (decena == 5)
+                        textoDecena = "cincuenta";
+                    else if (decena == 6)
+                        textoDecena = "sesenta";
+                    else if (decena == 7)
+                        textoDecena = "setenta";
+                    else if (decena == 8)
+                        textoDecena = "ochenta";
+                    else if (decena == 9)
+                        textoDecena = "noventa";
+
+                    if (unidad == 0) {
+                        resultado = textoDecena;
+
+                    } else {
+                        if (unidad == 1)
+                            textoUnidad = "uno";
+                        else if (unidad == 2)
+                            textoUnidad = "dos";
+                        else if (unidad == 3)
+                            textoUnidad = "tres";
+                        else if (unidad == 4)
+                            textoUnidad = "cuatro";
+                        else if (unidad == 5)
+                            textoUnidad = "cinco";
+                        else if (unidad == 6)
+                            textoUnidad = "seis";
+                        else if (unidad == 7)
+                            textoUnidad = "siete";
+                        else if (unidad == 8)
+                            textoUnidad = "ocho";
+                        else if (unidad == 9)
+                            textoUnidad = "nueve";
+
+                        resultado = textoDecena + " y " + textoUnidad;
+                    }
+                }
+            }
+            System.out.println("El número en letras es: " + resultado);
+            System.out.println();
+            System.out.print("Introduce un número entre 1 y 99: ");
+            num = sc.nextInt();
+
+        }
+        sc.close();
+        System.out.println("El número debe estar entre 1 y 99.");
     }
 }

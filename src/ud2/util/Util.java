@@ -1,4 +1,4 @@
-package ud2.util.java;
+package ud2.util;
 
 public class Util {
     public static boolean esPar(int num) {
