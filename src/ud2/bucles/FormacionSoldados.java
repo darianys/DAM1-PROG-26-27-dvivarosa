@@ -1,4 +1,4 @@
-package ud2.metodos;
+package ud2.bucles;
 
 import java.util.Scanner;
 

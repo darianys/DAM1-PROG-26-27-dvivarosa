@@ -1,6 +1,5 @@
-package ud2.metodos;
+package ud2.bucles;
 
-import java.util.Scanner;
 
 /**
  * @author Darianys Rosales
@@ -9,15 +8,19 @@ import java.util.Scanner;
 public class NumeroALetra {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Introduce un número entre 1 y 99: ");
-        int num = sc.nextInt();
 
-        while (num >= 1 && num <= 99) {
+        for (int i = 1; i <= 99; i++) {
+            System.out.println(convertirALetra(i));
+        }
+        
+    }
+
+    public static String convertirALetra(int num) {
+        String resultado = "";
+        if (num >= 1 && num <= 99) {
 
             int decena = num / 10;
             int unidad = num % 10;
-            String resultado = "";
 
             if (num >= 10 && num <= 19) {
 
@@ -90,7 +93,7 @@ public class NumeroALetra {
                         resultado = "ocho";
                     else if (unidad == 9)
                         resultado = "nueve";
-                    
+
                 } else {
                     if (decena == 3)
                         textoDecena = "treinta";
@@ -130,17 +133,38 @@ public class NumeroALetra {
                         else if (unidad == 9)
                             textoUnidad = "nueve";
 
-                        resultado = textoDecena + " y " + textoUnidad;
+                    resultado = textoDecena + " y " + textoUnidad;
                     }
                 }
             }
-            System.out.println("El número en letras es: " + resultado);
-            System.out.println();
-            System.out.print("Introduce un número entre 1 y 99: ");
-            num = sc.nextInt();
-
         }
-        sc.close();
-        System.out.println("El número debe estar entre 1 y 99.");
+    return resultado;
+    }
+
+    public  static String unidad(int n){
+        String resultado = "";
+        int decena = n / 10;
+        int unidad = n % 10;
+        if (decena == 0) {
+                    if (unidad == 1)
+                        resultado = "uno";
+                    else if (unidad == 2)
+                        resultado = "dos";
+                    else if (unidad == 3)
+                        resultado = "tres";
+                    else if (unidad == 4)
+                        resultado = "cuatro";
+                    else if (unidad == 5)
+                        resultado = "cinco";
+                    else if (unidad == 6)
+                        resultado = "seis";
+                    else if (unidad == 7)
+                        resultado = "siete";
+                    else if (unidad == 8)
+                        resultado = "ocho";
+                    else if (unidad == 9)
+                        resultado = "nueve";
+                }
+        return resultado;
     }
 }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class IMC {
     static double imc(double kg, double cm){
-        return kg / cm;
+        return kg / Math.pow(cm, 2);
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
