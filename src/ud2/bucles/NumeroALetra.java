@@ -50,49 +50,13 @@ public class NumeroALetra {
                 if (num == 20) {
                     resultado = "veinte";
                 } else {
-                    resultado = "veinti";
-                    if (unidad == 1)
-                        resultado += "uno";
-                    else if (unidad == 2)
-                        resultado += "dos";
-                    else if (unidad == 3)
-                        resultado += "tres";
-                    else if (unidad == 4)
-                        resultado += "cuatro";
-                    else if (unidad == 5)
-                        resultado += "cinco";
-                    else if (unidad == 6)
-                        resultado += "seis";
-                    else if (unidad == 7)
-                        resultado += "siete";
-                    else if (unidad == 8)
-                        resultado += "ocho";
-                    else if (unidad == 9)
-                        resultado += "nueve";
+                    resultado = "veinti" + obtenerUnidad(unidad);
                 }
             } else {
                 String textoDecena = "";
-                String textoUnidad = "";
 
                 if (decena == 0) {
-                    if (unidad == 1)
-                        resultado = "uno";
-                    else if (unidad == 2)
-                        resultado = "dos";
-                    else if (unidad == 3)
-                        resultado = "tres";
-                    else if (unidad == 4)
-                        resultado = "cuatro";
-                    else if (unidad == 5)
-                        resultado = "cinco";
-                    else if (unidad == 6)
-                        resultado = "seis";
-                    else if (unidad == 7)
-                        resultado = "siete";
-                    else if (unidad == 8)
-                        resultado = "ocho";
-                    else if (unidad == 9)
-                        resultado = "nueve";
+                    resultado = obtenerUnidad(unidad);
 
                 } else {
                     if (decena == 3)
@@ -114,26 +78,7 @@ public class NumeroALetra {
                         resultado = textoDecena;
 
                     } else {
-                        if (unidad == 1)
-                            textoUnidad = "uno";
-                        else if (unidad == 2)
-                            textoUnidad = "dos";
-                        else if (unidad == 3)
-                            textoUnidad = "tres";
-                        else if (unidad == 4)
-                            textoUnidad = "cuatro";
-                        else if (unidad == 5)
-                            textoUnidad = "cinco";
-                        else if (unidad == 6)
-                            textoUnidad = "seis";
-                        else if (unidad == 7)
-                            textoUnidad = "siete";
-                        else if (unidad == 8)
-                            textoUnidad = "ocho";
-                        else if (unidad == 9)
-                            textoUnidad = "nueve";
-
-                    resultado = textoDecena + " y " + textoUnidad;
+                    resultado = textoDecena + " y " + obtenerUnidad(unidad);
                     }
                 }
             }
@@ -141,30 +86,19 @@ public class NumeroALetra {
     return resultado;
     }
 
-    public  static String unidad(int n){
-        String resultado = "";
-        int decena = n / 10;
-        int unidad = n % 10;
-        if (decena == 0) {
-                    if (unidad == 1)
-                        resultado = "uno";
-                    else if (unidad == 2)
-                        resultado = "dos";
-                    else if (unidad == 3)
-                        resultado = "tres";
-                    else if (unidad == 4)
-                        resultado = "cuatro";
-                    else if (unidad == 5)
-                        resultado = "cinco";
-                    else if (unidad == 6)
-                        resultado = "seis";
-                    else if (unidad == 7)
-                        resultado = "siete";
-                    else if (unidad == 8)
-                        resultado = "ocho";
-                    else if (unidad == 9)
-                        resultado = "nueve";
-                }
-        return resultado;
+    public  static String obtenerUnidad(int unidad){
+        String textoUnidad = switch (unidad) {
+            case 1 -> "uno";
+            case 2 -> "dos";
+            case 3 -> "tres";
+            case 4 -> "cuatro";
+            case 5 -> "cinco";
+            case 6 -> "seis";
+            case 7 -> "siete";
+            case 8 -> "ocho";
+            case 9 -> "nueve"; 
+            default -> ""; 
+        };
+        return textoUnidad;
     }
 }
