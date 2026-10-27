@@ -8,13 +8,13 @@ import java.util.Scanner;
 public class Mario {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Introducir la altura de los muros: ");
+        System.out.println("Introducir la altura de los muros (número negativo para terminar): ");
         int altura = sc.nextInt();
         int saltoArriba = altura;
         int contArriba = 0;
         int contAbajo = 0;
 
-        while (altura != -1) {
+        while (altura > 0) {
 
             if (altura > saltoArriba)
                 contArriba++;
@@ -28,7 +28,7 @@ public class Mario {
         }
         sc.close();
 
-        System.out.println("Saltos hacia arriba: " + contArriba);
-        System.out.println("Saltos hacia abajo: " + contAbajo);
+        System.out.println(contArriba);
+        System.out.println(contAbajo);
     }
 }

@@ -9,7 +9,7 @@ public class CalculadoraHumana {
         int num = rnd.nextInt(1, 150 + 1);
 
         if (operacionRandom == 1) {
-            suma;
+            int suma = 0;
         }
     }
 }
