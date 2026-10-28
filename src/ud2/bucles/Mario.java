@@ -5,6 +5,8 @@ package ud2.bucles;
 
 import java.util.Scanner;
 
+import org.junit.Test;
+
 public class Mario {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -30,5 +32,6 @@ public class Mario {
 
         System.out.println(contArriba);
         System.out.println(contAbajo);
-    }
+    } 
+
 }

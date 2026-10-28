@@ -15,7 +15,7 @@ public class ArbolMasAlto {
         double alturaMayor = 0;
         String etiqueta = "";
 
-        //isEmpty : metodo que se puede usar en cadena, devuelve true si esta vacio
+        // isEmpty : metodo que se puede usar en cadena, devuelve true si esta vacio
         while (!identArbol.isEmpty() && alturaArbol != -1) {
             if (alturaArbol > alturaMayor) {
                 alturaMayor = alturaArbol;
@@ -27,10 +27,10 @@ public class ArbolMasAlto {
 
             System.out.print("Introducir la identificación del árbol: ");
             identArbol = sc.next();
-        } 
+        }
         sc.close();
 
-        System.out.printf("El arbol más alto mide %.2fcm ",alturaMayor);
+        System.out.printf("El arbol más alto mide %.2fcm ", alturaMayor);
         System.out.println(etiqueta);
     }
 }

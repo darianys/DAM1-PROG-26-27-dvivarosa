@@ -38,11 +38,10 @@ public class Supermercado {
             final int UNO = 1;
             final double CENTAVO_CINCUENTA = 0.5;
             final double CENTAVO_VEINTE = 0.2;
-            final double CENTAVO_DIEZ = 0.1; 
+            final double CENTAVO_DIEZ = 0.1;
             final double CENTAVO_CINCO = 0.05;
             final double CENTAVO_DOS = 0.02;
             final double CENTAVO_UNO = 0.01;
-
 
             double decena = devuelto / 100;
             double centena = devuelto / 10;
@@ -51,9 +50,9 @@ public class Supermercado {
 
             if (metodoPago == 2) {
                 devuelto = pagoCliente - total;
-                if ( decena == 0) {
-                    
-                } 
+                if (decena == 0) {
+
+                }
             }
 
         }
