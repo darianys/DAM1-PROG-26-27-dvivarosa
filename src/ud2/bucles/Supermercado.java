@@ -1,7 +1,12 @@
 package ud2.bucles;
 
 import java.util.Scanner;
-
+/**el vuelto de billetes lo puedo hacer viendo es es el resto el billete lo de(con if)
+ * ejem: si el vuelto es 23 seria:
+ * if(pago cliente >= billete)
+ * entonces da ese y se le va restando
+ * creo que seria una solucion
+ */
 public class Supermercado {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

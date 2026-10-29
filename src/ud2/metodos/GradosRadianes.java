@@ -13,6 +13,8 @@ public class GradosRadianes {
 
     public static double radianes(double grados) {
         if (grados < 0 || grados > 360) {
+           return radianes(grados * Math.PI / 180);
+        }else{
             
         }
         return radianes(grados * Math.PI / 180);
