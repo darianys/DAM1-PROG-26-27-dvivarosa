@@ -13,6 +13,10 @@ public class TirosLibres {
         int lanzados = 0;
 
         while (stop == false) {
+            
+            if (tiroFallado >= 3 || lanzados >= 20) {
+                stop = true;
+            }
 
             if (tiro == 1) {
                 tiroAnotado++;
@@ -21,10 +25,6 @@ public class TirosLibres {
             }
 
             lanzados++;
-
-            if (tiroFallado == 3 || lanzados >= 20) {
-                stop = true;
-            }
 
             tiro = sc.nextInt();
         }
