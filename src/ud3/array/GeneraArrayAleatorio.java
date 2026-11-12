@@ -1,5 +1,6 @@
 package ud3.array;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class GeneraArrayAleatorio {
@@ -10,6 +11,9 @@ public class GeneraArrayAleatorio {
         for (int i = 0; i < tablaB.length; i++) {
             System.out.print("[ " + tablaB[i] + " ]");
         }
+         //o puedo imprimirse usando el toString:
+         System.out.println(" ");
+        System.out.println(Arrays.toString(tablaB));
     }
     static int[] arrayAleatorio(int n){
         int[] tabla = new int[n];
