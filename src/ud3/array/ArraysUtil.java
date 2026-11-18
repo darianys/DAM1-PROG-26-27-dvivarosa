@@ -176,6 +176,17 @@ public class ArraysUtil {
         return tAux;
     }
 
+     static int[] arrayAleatorio(int n, int rndInicio, int rndFin) {
+        int[] numeros = new int[n];
+        Random rnd = new Random();
+
+        for (int i = 0; i < numeros.length; i++) {
+            numeros[i] = rnd.nextInt(rndFin - rndInicio + 1) + rndInicio;
+        }
+
+        return numeros;
+    }
+
     public static void main(String[] args) {
         int[] numeros = new int[10];
         Random rnd = new Random();
