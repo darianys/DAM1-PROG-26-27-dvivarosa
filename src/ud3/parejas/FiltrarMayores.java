@@ -1,5 +1,8 @@
 package ud3.parejas;
-
+/**
+ * @author Aiko Serrano y Darianys Rosales
+ *
+ */
 import java.util.Arrays;
 import java.util.Random;
 

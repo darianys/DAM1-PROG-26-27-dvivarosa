@@ -1,10 +1,13 @@
 package ud3.parejas;
-
+/**
+ * @author Aiko Serrano y Darianys Rosales
+ *
+ */
 import java.util.Arrays;
 import java.util.Random;
 
 public class EliminarValores {
-    static int[] eliminarPorPosicion(int[] t, int valor) {
+    static int[] eliminarValores(int[] t, int valor) {
         int[] tAux = new int[t.length];
         int cont = 0;
 
@@ -53,7 +56,7 @@ public class EliminarValores {
         t = insertarAlFinal(t, 5);
         System.out.println(Arrays.toString(t));
 
-        System.out.println(Arrays.toString(eliminarPorPosicion(t, 27)));
+        System.out.println(Arrays.toString(eliminarValores(t, 5)));
 
     }
 }
