@@ -11,6 +11,11 @@ public class CalculadoraHumana {
 
         int operando1 = sc.nextInt();
         int operacion = generarOperacione(operando1);
+
+        //no va:
+        System.out.println(operacion + num);
+        
+        sc.close();
     }
 
     public static int generarOperacione(int operando1) {
