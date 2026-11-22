@@ -4,10 +4,6 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-import javax.swing.plaf.TableUI;
-
-import ud2.condicional.NumeroALetra;
-
 public class ArraysUtil {
 
     // Inicializar array con aleatorios
