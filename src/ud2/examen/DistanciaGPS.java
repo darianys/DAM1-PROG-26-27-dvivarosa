@@ -20,6 +20,6 @@ public class DistanciaGPS {
     return d;
 }
 public static void main(String[] args) {
-    System.out.println(distancia(16523, 62156, 2736, 36764.73));
+    System.out.println(distancia(42.3897, -8.7099, 42.4310, -8.6440));
 }
 }
