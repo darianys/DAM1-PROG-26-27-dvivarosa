@@ -52,9 +52,7 @@ public class EliminarValores {
 
     public static void main(String[] args) {
 
-        int[] t = arrayAleatorio(10, 5, 50);
-        t = insertarAlFinal(t, 5);
-        System.out.println(Arrays.toString(t));
+        int t[] = {2, 3, 4, 5, 6, 7, 8}; 
 
         System.out.println(Arrays.toString(eliminarValores(t, 5)));
 
