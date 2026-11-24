@@ -15,5 +15,7 @@ public class Burbuja {
 
         Arrays.sort(tabla);
         System.out.print(Arrays.toString(tabla));
+
+        //chequear esto, es una comparacion de dos a dos
     }
 }

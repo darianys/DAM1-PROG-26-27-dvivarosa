@@ -12,10 +12,10 @@ public class E0508 {
         System.out.println(Arrays.toString(t));
 
         for (int i = 0; i < t.length; i++) {
-            if (t[i] % 2 == 0){ 
-                contPos ++;
+            if (t[i] % 2 == 0) {
+                contPos++;
             } else {
-                contNeg ++;
+                contNeg++;
             }
         }
 
@@ -23,22 +23,28 @@ public class E0508 {
         int[] tNeg = new int[contNeg];
 
         for (int i = 0; i < t.length; i++) {
-            if (t[i] % 2 == 0){ 
-                tPos[i] = t[i ];
+            if (t[i] % 2 == 0) {
+                for (int j = 0; j < tPos.length; j++) {
+                    if (t[i] % 2 == 0)
+                    System.out.print(" " + t[i] + " ");
+                    tPos[j] = t[i];
+                }
             } else {
-                tNeg[i] = t[i];
+                for (int j = 0; j < tNeg.length; j++) {
+                    tNeg[j] = t[j];
+                }
             }
         }
 
-        Arrays.sort(tPos);
-        Arrays.sort(tNeg);
+        //Arrays.sort(tPos);
+        //Arrays.sort(tNeg);
 
         System.out.println(Arrays.toString(tPos));
         System.out.println(Arrays.toString(tNeg));
 
     }
 
-    public static int[] tablaRandom(int n){
+    public static int[] tablaRandom(int n) {
         int[] t = new int[n];
         Random rnd = new Random();
 

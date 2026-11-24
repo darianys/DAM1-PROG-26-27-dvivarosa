@@ -11,7 +11,6 @@ public class Concatenar {
         for (int i = 0; i < concatenado.length; i++) {
         }
 
-        Arrays.sort(concatenado);
         System.out.println(Arrays.toString(concatenado));
 
     }

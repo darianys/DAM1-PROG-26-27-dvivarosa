@@ -2,7 +2,7 @@ package ud3.array;
 
 import java.util.Arrays;
 
-public class InsertarEnPosicion {
+public class InsertarPosicion {
     public static void main(String[] args) {
         int t[] = { 1, 2, 3, 2, 1 };
         int num = 3;

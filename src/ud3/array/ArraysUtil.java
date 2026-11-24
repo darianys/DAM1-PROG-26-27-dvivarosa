@@ -172,6 +172,7 @@ public class ArraysUtil {
         return tAux;
     }
 
+    //Array aleatorio con inicio y fin
      static int[] arrayAleatorio(int n, int rndInicio, int rndFin) {
         int[] numeros = new int[n];
         Random rnd = new Random();
@@ -183,6 +184,32 @@ public class ArraysUtil {
         return numeros;
     }
 
+    //Insertar valor de forma ordenada
+    static int[] insertarOrdenado(int[] t, int valor) {
+        // posicion por defecto en caso de estar vacio 
+        int pos = 0;
+
+        // si el array no esta vacio ps se compara y se introduce donde debe
+        if (t.length != 0) {
+            while (t[pos] < valor) {
+                pos++;
+            }
+        }
+
+        return insertarPosicion(t, valor, pos);
+    }
+
+    //Esta ordenado? si o no
+    static boolean estaOrdenado(int[] t){
+        if (t.length < 2)
+            return true;
+
+        for (int i = 1; i < t.length; i++) {
+            if (t[i-1] > t[i])
+                return false;
+            }
+        return true;
+    }
     public static void main(String[] args) {
         int[] numeros = new int[10];
         Random rnd = new Random();
