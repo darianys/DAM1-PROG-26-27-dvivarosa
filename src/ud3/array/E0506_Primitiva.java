@@ -15,7 +15,7 @@ public class E0506_Primitiva {
             for (int j = 0; j < ganadora.length; j++) {
              if (apuesta[i] == ganadora[j]) {
                 aciertos ++;
-             }   
+             }
             }
         } 
         return aciertos;
