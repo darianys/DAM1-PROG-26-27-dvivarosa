@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class E0506_Primitiva {
     public static void main(String[] args) {
-        int apuesta[] = {22, 40, 73, 86};
-        int ganadora[] = {40, 6, 83, 86}; 
+        int apuesta[] = {22, 40, 73, 86, 1, 10};
+        int ganadora[] = {40, 6, 83, 86, 25, 1}; 
 
         System.out.println(numAciertos(apuesta, ganadora));
         
