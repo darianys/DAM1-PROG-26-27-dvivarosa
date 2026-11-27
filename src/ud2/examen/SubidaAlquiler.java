@@ -21,6 +21,9 @@ public class SubidaAlquiler {
     public static double subidaAlquiler(double rentaActual, double precioMaximoReferencia) {
         double importe = 0;
         double total = 0;
+        if (rentaActual < 0) {
+            return 0;
+        }
 
         if (rentaActual >= precioMaximoReferencia) {
             return 0;
